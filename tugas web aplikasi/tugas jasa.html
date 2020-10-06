@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Jasa Joki Mobile Legends</title>
+    
+    
+    <style>
+        .container {
+            width : 1050px;
+            border-style: ridge;
+            font-family: 'geneva';
+            font-size: 18px;
+            border: 1px solid rgb(199, 207, 78);
+            outline-style: solid;
+            outline-color: rgb(67, 186, 255);
+            color: rgb(0, 0, 0);
+            background-color: rgb(87, 208, 238);
+        }
+
+        .card{
+          background-color: rgb(56, 150, 194);
+
+        }
+
+        .merah {
+          background-color: red;
+          color: white;
+        }
+
+        .h2{
+            width : 100%;
+            border-style: ridge;
+            font-family: 'arial narrow';
+            border: 1px solid rgb(12, 7, 0);
+            outline-style: solid;
+            outline-color: rgb(42, 42, 202);
+            color: rgb(0, 0, 0);
+            background-color: rgb(87, 201, 201);
+        }
+
+    </style>
+    
+</head>
+<body style="background-color :rgb(209, 255, 253);">
+    <center> <h1>JASA JOKI MOBILE LEGENDS</h1>
+      <h4>proses cepat-trusted-banyak bonus lainnya</h4>
+      </center>
+  
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-sm-offset-1">
+  
+                  <h5><strong>Profil singkat PHD(pizza hut delivery)</strong></h5>
+                 
+              </div>
+      
+                <div class="col-md-6">
+               
+               </div>
+          </div>
+      </div>
+     
+    <br>
+    <br>
+    <center><h2 class="h2">STARBHAK MART</h2></center>
+    <br>
+    <div class="container">
+        <div class="card">
+            <h4><center>FORM INPUT DATA PRODUK</center></h4>
+ 
+            <div class="form-group row mt-4">
+              <label for="kodeproduk" class="col-sm-3  col-form-label">Kode Produk</label>
+              <div class="col-sm-6">
+              <input type="text" class="mb-2  mt-2" id="id_kodeproduk" placeholder="Masukan Kode Produk">
+              </div>
+            </div>
+    
+            <div class="form-group row">
+                <label for="namaproduk" class="col-sm-3 col-form-label">Nama Produk</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control mb-4" id="id_namaproduk" placeholder="Masukan Nama Produk">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="hargaproduk" class="col-sm-3 col-form-label">Harga Produk</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control mb-4" id="id_hargaproduk" placeholder="Masukan Harga Produk">
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <label for="satuan" class="col-sm-3 col-form-label">Satuan</label>
+                <div class="col-sm-8">
+                <select class="form-control mb-4" id="id_satuan">
+                  <option>-- pilih --</option>
+                  <option value="piring">Piring</option>
+                  <option value="plastik">Plastik</option>   
+                  <option value="sterofoam">Sterofoam</option>
+                  <option value="mangkuk">Mangkuk</option>
+                  <option value="gelas">Gelas</option>
+                </select>
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <label for="kategori" class="col-sm-3 col-form-label">Kategori</label>
+                <div class="col-sm-8">
+                <select class="form-control mb-4" id="id_kategori"> 
+                  <option >-- pilih kategori --</option>
+                  <option value="minuman hangat">Minuman Hangat</option>
+                  <option value="minuman dingin">Minuman Dingin</option>
+                  <option value="makanan ringan">Makanan Ringan</option>
+                  <option value="makanan berat">Makanan Berat</option>
+                </select>
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <label for="stokawal" class="col-sm-3 col-form-label">Stok Produk</label>
+                <div class="col-sm-8">
+                <input type="number" class="form-control mb-4" id="id_stokawal" placeholder="Masukan Stok Produk">
+                </div>
+            </div>
+    
+            <div class="form-group row">
+              <label for="urlgambar" class="col-sm-3 col-form-label">URL Gambar</label>
+              <div class="col-sm-8">
+                <input type="url" class="form-control" id="url_gambar" placeholder="Masukan URL Gambar">
+              </div>
+            </div>
+
+            <center>  
+              <div class="p-2">
+              <button class="btn btn-success mb-4" id="button1" onclick="simpan()">Simpan</button>
+            </div>
+          </center>
+          
+    
+        </div>
+    </div>
+     <br>
+        <table style="background: rgb(126, 156, 255); color:rgb(0, 0, 0);  text-align: center; font-family: comic sans ms; font-size: 16px; width: 1050px; border: 4px height="125" width="1024" bgcolor="black" border="1" align="center" >
+            <thead>
+              <tr class="table-info">
+                <th scope="col">No</th>
+                <th scope="col">Kode Produk</th>
+                <th scope="col">Nama Produk</th>
+                <th scope="col">Harga Produk</th>
+                <th scope="col">Satuan Produk</th>
+                <th scope="col">Kategori Produk</th>
+                <th scope="col">Stok Produk</th>
+                <th scope="col">Gambar Produk</th>
+                <th scope="col">Modify</th>
+              </tr>
+            </thead>
+            <tbody id="tampildata">
+
+            </tbody>
+          </table>
+   
+    
+</body>
+</html>
