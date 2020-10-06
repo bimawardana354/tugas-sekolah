@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
  
     <title>Jasa Joki Mobile Legends</title>
-    
-    
+
     <style>
         .container {
             width : 1050px;
@@ -40,29 +45,91 @@
         }
 
     </style>
-    
-</head>
-<body style="background-color :rgb(209, 255, 253);">
-    <center> <h1>JASA JOKI MOBILE LEGENDS</h1>
-      <h4>proses cepat-trusted-banyak bonus lainnya</h4>
-      </center>
-  
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 col-sm-offset-1">
-  
-                  <h5><strong>Profil singkat PHD(pizza hut delivery)</strong></h5>
-                 
-              </div>
-      
-                <div class="col-md-6">
-               
-               </div>
-          </div>
-      </div>
-     
+
+  </head>
+  <body style="background-color :rgb(209, 255, 253);">
     <br>
     <br>
+    <center> 
+        <h1 class="h2">JASA JOKI MOBILE LEGENDS</h1>
+        <h5>proses cepat-trusted-banyak bonus lainnya</h5>
+    </center>
+    <br>
+    <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-offset-1">
+                    <center>
+                      <h5><strong>Syarat Dan Ketentuan Jasa Joki ML</strong></h5>
+                    </center>
+                    <br>
+                    <ol type="1">
+                        <li>Pastikan kamu sudah Bind akun kamu FB, VK ,Gmail , Moonton Account</li>
+                        <li>Memberikan informasi akun  id dan  password Moonton, Fb , Vk , Google Account salah satu yang benar.</li>
+                        <li>Dilarang Login game yang sedang di joki bisa login tapi konfirmasi ke admin.</li>
+                        <li>Pembayaran Di Awal atau sebelum Proses ( tidak terima Dp ).</li>
+                    </ol>
+                </div>
+  
+                  <div class="col-md-6">
+                    <center>
+                        <h5><strong>Metode pembayaran Jasa Joki ML</strong></h5>
+                      </center>
+                      <br>
+                      <ul type="square">
+                          <li>pembayaran via Bank bri = 6565-0101-1311-539</li>
+                          <li>pembayaran via Vank bca = 8240443890</li>
+                          <li>pembayaran via Bank Mandiri = 1400014611405</li>
+                          <li>pembayaran via Bank BNI = 0369722030</li>
+                          <li>pembayaran via OVO = 082257340647</li>
+                          <li>pembayaran via Dana= 082257340647</li>
+                          <li>pembayaran via Pulsa = 083853944499</li>
+                          <li>pembayaran via gopay = 082257340647</li>
+                          <li>pembayaran via indomart = chat Admin</li>
+                          <li> pembayaran via alfamart = chat Admin SEMUA ATAS NAMA AANK BUDI SANTOSO</li>
+                      </ul>
+                 </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="container">
+            <div class="row">
+             <div class="col-md-12 text-center">
+                <h3>Harga Jasa Joki ML</h3>
+                <hr>
+             </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-offset-1">
+                    <ul type="square">
+                        <li><strong>Jasa Joki ML ( Elite sampai Master )</strong></li>
+                    </ul>
+                    <p>
+                        Harga paketan = Rp.40.000 <br>
+                        Harga satuan (satu bintang) = Rp.3.000 <br>
+                        Elite sampai master butuh 12 bintang <br>
+                        Waktu proses 1 hari <br>
+                        Jika beruntung bonus savage atau maniac
+                    </p>
+                </div>
+  
+                  <div class="col-md-6">
+                      <ul type="square">
+                          <li><strong>Jasa Joki ML ( Master sampai Grand Master )</strong></li>
+                      </ul>
+                      <p>
+                        Untuk paketan = 64 rb <br>
+                        Untuk satuan = 4.000 <br>
+                        Master sampai Grand master butuh 16 bintang <br>
+                        Waktu proses 1 hari <br>
+                        Jika beruntung bonus savage atau maniac <br>
+                      </p>
+                 </div>
+            </div>
+        </div>
+       
     <center><h2 class="h2">STARBHAK MART</h2></center>
     <br>
     <div class="container">
@@ -159,7 +226,142 @@
 
             </tbody>
           </table>
-   
+
+          <script>
+           
+                var kodeproduk = []
+                var namaproduk = []
+                var hargaproduk = []
+                var satuan = []
+                var kategori = []
+                var stokawal = []
+                var gambarproduk = []  
+
+                var tampil = document.getElementById('tampildata')
+          
+                function showData() {
+                  tampil.innerHTML = ""
+
+                    for (i = 0; i <kodeproduk.length; i++) {
+                    var nodata = i + 1
+                
+                    kode="MD-0" + Number(i+1)
+                    var txt_stokawal = Number(stokawal[i])
+                    if (txt_stokawal < 5){
+                      var cek = "merah"
+                    }else{
+                      var cek = ""
+                    }
+
+                     const matauang='Rp.'
+                     const nomor=i+1
     
-</body>
+                    tampil.innerHTML += "<tr>" +
+                      "<th>" + nodata + "</th>" +
+                      "<td>" + kodeproduk[i] + "</td>" +
+                      "<td>" + namaproduk[i] + "</td>" +
+                      "<td>" + matauang + hargaproduk[i] + "</td>" +
+                      "<td>" + satuan[i] + "</td>" +
+                      "<td>" + kategori[i] + "</td>" +
+                      "<td class="+cek+">" + stokawal[i] + "</td>" +
+                      "<td>"+"<img src='"+ gambarproduk[i] +"' alt='gambar' width='200px' height='150px'>"+"</td>"+
+                      "<td>" +
+                      "<button class='btn btn-warning'onclick='editdata(" + i + ")'>Edit</button>" +
+                      "<button class='btn btn-danger' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
+                      "</td>" +
+                      "</tr>"
+                  }
+                }
+                showData()
+                function batal() {
+                document.getElementById('id_kodeproduk').value = ""
+                document.getElementById('id_namaproduk').value = ""
+                document.getElementById('id_hargaproduk').value = ""
+                document.getElementById('id_satuan').value = ""
+                document.getElementById('id_kategori').value = ""
+                document.getElementById('id_stokawal').value = ""
+                document.getElementById('url_gambar').value = "" 
+    
+                 document.getElementById("button1").style.display = "inline"
+                 document.getElementById("button2").style.display = "none"
+                 document.getElementById("button").style.display = "none"
+                }
+                
+                function simpan() {
+                  var produkbaru = document.getElementById('id_kodeproduk').value
+                  var namabaru = document.getElementById('id_namaproduk').value
+                  var hargabaru = document.getElementById('id_hargaproduk').value
+                  var satuanbaru = document.getElementById('id_satuan').value
+                  var kategoribaru = document.getElementById('id_kategori').value
+                  var stokbaru = document.getElementById('id_stokawal').value
+                  var gambarbaru = document.getElementById('url_gambar').value
+
+                  if (produkbaru == '') {
+                    alert('anda belum memasukan data')
+                  }else{
+                    kodeproduk.push(produkbaru)
+                    namaproduk.push(namabaru)
+                    hargaproduk.push(hargabaru)
+                    satuan.push(satuanbaru)
+                    kategori.push(kategoribaru)
+                    stokawal.push(stokbaru) 
+                    gambarproduk.push(gambarbaru)
+                   
+                    showData()
+                    document.getElementById('id_kodeproduk').value = ""
+                    document.getElementById('id_namaproduk').value = ""
+                    document.getElementById('id_hargaproduk').value = ""
+                    document.getElementById('id_satuan').value = ""
+                    document.getElementById('id_kategori').value = ""
+                    document.getElementById('id_stokawal').value = "" 
+                    document.getElementById('url_gambar').value = ""
+    
+                  }
+                }
+          
+             
+    
+    </script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>
+
+
+
+<!--pake yang di bawah jadi kecil labelnya harus pake id kategori_list-->
+<!--<input type="text" class="mb-4 form-control" list="kategori_list" id="id_kategori" onchange="kodepro(this.value)" placeholder="pilih kategori">-->
+
+
+
+                  <script>
+                    var nilai = prompt("Masukan Nilai:");
+                    var hasil = "";
+            
+                 if (nilai <= 40) {
+                         hasil = "Belajar Lagi !"
+                    } else if(nilai <= 60){
+                         hasil = "D"
+                    } else if(nilai <= 65){
+                         hasil = "C"
+                    } else if(nilai <= 75){
+                         hasil = "B"
+                    } else if(nilai <= 80){
+                         hasil = "A"
+                    } else if(nilai <= 85){
+                         hasil = "A+"
+                    } else if(nilai <= 90){
+                         hasil = "A++"
+                    } else if(nilai <= 100){
+                         hasil = "AA"
+                    } else {
+                        alert('Silahkan masukan nilai yang valid');
+            
+                        document.write(`<p>Nilai anda: ${nilai}</p> <br> <p>Tingkat : ${hasil}</p>`);
+            
+                 </script>
+                        
