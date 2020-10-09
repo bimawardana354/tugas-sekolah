@@ -444,6 +444,137 @@
             </tbody>
           </table>
 
+           
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <div class="modal-header" style="background-color: rgb(146, 144, 150);color: rgb(0, 0, 0);">
+                  <h4 class="modal-title" id="exampleModalLabel">
+                  Edit Data
+              </h4>
+              <div class="col-xs-1 col-xs-offset-11">
+              <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="modal-body col-md-12" style="background-color: rgb(255, 255, 255);">
+            <div class="form-group row mt-4">
+              <label for="kategoriproduk" class="col-sm-3 col-form-label">Kategori Produk</label>
+              <div class="col-sm-6">
+              <select class="col-sm-10 mb-3 mt-2" id="id_mkategoriproduk"> 
+                <option >-- pilih Jenis Produk --</option>
+                <option value="GM1" data-price="2500">GM1</option>
+                <option value="EPIC1" data-price="5000">EPIC1</option>
+                <option value="LEGEND1" data-price="10000">LEGEND1</option>
+                <option value="MYTHIC1" data-price="20000">MYTHIC1</option>
+                <option value="NORMAL1" data-price="70000">NORMAL1</option>
+                <option value="NORMAL2" data-price="130000">NORMAL2</option>
+                <option value="NORMAL3" data-price="180000">NORMAL3</option>
+                <option value="NORMAL4" data-price="180000">NORMAL4</option>
+                <option value="REGULER1" data-price="400000">REGULER1</option>
+                <option value="REGULER2" data-price="350000">REGULER2</option>
+                <option value="KILAT1" data-price="500000">KILAT1</option>
+                <option value="KILAT2" data-price="450000">KILAT2</option>
+              </select>
+              </div>
+          </div>
+            
+            <div class="form-group row">
+                <label for="idml" class="col-sm-3 col-form-label">ID Mobile Legends</label>
+                <div class="col-sm-6">
+                    <input type="number" class="col-sm-10" id="id_midml" placeholder="Masukan ID Mobile Legends">
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="serverml" class="col-sm-3 col-form-label">Server Mobile Legends</label>
+              <div class="col-sm-6">
+              <input type="number" class="col-sm-10 mb-3" id="id_mserverml" placeholder="Masukan Server Mobile Legends">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="namapembeli" class="col-sm-3 col-form-label">Nama Pembeli</label>
+                <div class="col-sm-6">
+                    <input type="text" class="col-sm-10 mb-2" id="id_mnamapembeli" placeholder="Masukan Nama Lengkap">
+                </div>
+            </div>
+    
+            <div class="form-group row">
+                <label for="metodepembayaran" class="col-sm-3 col-form-label">Metode Pembayaran</label>
+                <div class="col-sm-6">
+                <select class="col-sm-10 mt-2 mb-3" id="id_mmetodebayar">
+                  <option>-- pilih Metode Pembayaran --</option>
+                  <option value="Bank bri">Bank bri</option> 
+                  <option value="OVO">OVO</option>   
+                  <option value="Pulsa">Pulsa</option>
+                  <option value="alfamart">alfamart</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="haripembelian" class="col-sm-3 col-form-label">Hari Pembelian</label>
+              <div class="col-sm-6">
+              <select class="col-sm-10 mt-2 " id="id_mhari">
+                <option>-- pilih hari pembelian --</option>
+                <option value="Senin" data-price="maaf kamu tidak dapat diskon :(">Senin</option> 
+                <option value="Selasa" data-price="maaf kamu tidak dapat diskon :(">Selasa</option>   
+                <option value="Rabu" data-price="maaf kamu tidak dapat diskon :(">Rabu</option>
+                <option value="Kamis" data-price="maaf kamu tidak dapat diskon :(">Kamis</option>
+                <option value="Jum'at" data-price="maaf kamu tidak dapat diskon :(">Jum'at</option>
+                <option value="Sabtu" data-price="Selamat kamu mendapatkan Diskon 20%">Sabtu</option>
+                <option value="Minggu" data-price="Selamat kamu mendapatkan Diskon 20%">Minggu</option>
+              </select>
+              </div>
+          </div>
+
+            <div class="form-group row">
+              <label for="tanggalpembelian" class="col-sm-3 mt-2 col-form-label">Tanggal Pembelian</label>
+              <div class="col-sm-6">
+              <input type="date" class="col-sm-10 mt-2 mb-3" id="id_mtanggal">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="hargaproduk" class="col-sm-3  mb-2 col-form-label">Harga Produk</label>
+              <div class="col-sm-6">
+                  <input type="" class="col-sm-10 mb-2 " id="id_mhargaproduk" placeholder="Harga produk">
+              </div>
+          </div>
+
+            <div class="form-group row">
+              <label for="diskon" class="col-sm-3 mb-2 col-form-label">Diskon</label>
+              <div class="col-sm-6">
+                  <input type="" class="col-sm-10 mb-2 " id="id_mdiskon" placeholder="Diskon produk">
+              </div>
+          </div>
+
+            <div class="form-group row">
+              <label for="totalharga" class="col-sm-3 mb-2 col-form-label">Total Harga</label>
+              <div class="col-sm-6">
+                  <input type="" class="col-sm-10 mb-2" id="id_mtotalharga" placeholder="Total harga">
+              </div>
+          </div>
+
+        </div>
+              
+          <div class="modal-footer">
+              
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-primary" onclick="simpanmodal()" data-dismiss="modal">Ganti</button>
+          </div>
+
+         </div>
+        </div>
+       </div>
+<!-- Modal end -->
+
+
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
           <script type="text/javascript">
@@ -507,18 +638,18 @@
                       "<td>" + diskon[i] + "</td>" +
                       "<td>" + totalharga[i] + "</td>" +
                       "<td>" +
-                      "<button class='btn btn-success'onclick='editdata(" + i + ")'>Bayar</button>" +
-                      "<button class='btn btn-info'onclick='editdata(" + i + ")'>Edit</button>" +
+                      "<button class='btn btn-success' onclick='editdata(" + i + ")'>Bayar</button>" +
+                      "<button class='btn btn-info' data-toggle='modal' data-target='#modal' onclick='editmodal(" + i + ")'>Edit</button>" +
                       "<br>" +
                       "<center>" + 
-                      "<button class='btn btn-dark'onclick='editdata(" + i + ")'>Hapus</button>" +
+                      "<button class='btn btn-dark' onclick='hapusdata(" + i + ")'>Hapus</button>" +
                       "</center>" +
                       "</td>" +
                       "</tr>"
                   }
                 }
                 showData()
-                function batal() {
+                function card() {
                 document.getElementById('id_kategoriproduk').value = ""
                 document.getElementById('id_idml').value = ""
                 document.getElementById('id_serverml').value = ""
@@ -573,7 +704,69 @@
                     
                   }
                 }
-          
+
+                function hapusdata(hapus) {
+                  kategoriproduk.splice(hapus, 1);
+                  idml.splice(hapus, 1);
+                  serverml.splice(hapus, 1);
+                  namapembeli.splice(hapus, 1);
+                  metodebayar.splice(hapus, 1);
+                  hari.splice(hapus, 1);  
+                  tanggal.splice(hapus, 1);
+                  hargaproduk.splice(hapus, 1);
+                  diskon.splice(hapus, 1);
+                  totalharga.splice(hapus, 1);  
+
+                  showData()
+                }
+            
+                  var index = []
+
+                  function editmodal(i) {
+                    document.getElementById('id_mkategoriproduk').value =  kategoriproduk[i]
+                    document.getElementById('id_midml').value =  idml[i]
+                    document.getElementById('id_mserverml').value =  serverml[i]
+                    document.getElementById('id_mnamapembeli').value =  namapembeli[i]
+                    document.getElementById('id_mmetodebayar').value =  metodebayar[i]
+                    document.getElementById('id_mhari').value =  hari[i]
+                    document.getElementById('id_mtanggal').value =  tanggal[i]
+                    document.getElementById('id_mhargaproduk').value =  hargaproduk[i]
+                    document.getElementById('id_mdiskon').value =  diskon[i]
+                    document.getElementById('id_mtotalharga').value =  totalharga[i]
+
+                    index.push(i)
+                  }
+
+                  function simpanmodal() {
+
+                   var simpanproduk = document.getElementById('id_mkategoriproduk').value 
+                   var simpanidml = document.getElementById('id_midml').value
+                   var simpanserverml = document.getElementById('id_mserverml').value 
+                   var simpannama = document.getElementById('id_mnamapembeli').value 
+                   var simpanmetodebayar = document.getElementById('id_mmetodebayar').value 
+                   var simpanhari = document.getElementById('id_mhari').value 
+                   var simpantanggal = document.getElementById('id_mtanggal').value 
+                   var simpanharga = document.getElementById('id_mhargaproduk').value 
+                   var simpandiskon = document.getElementById('id_mdiskon').value 
+                   var simpantotal = document.getElementById('id_mtotalharga').value
+
+
+                    kategoriproduk[index] = simpanproduk
+                    idml[index] = simpanidml
+                    serverml[index] = simpanserverml
+                    namapembeli[index] = simpannama
+                    metodebayar[index] = simpanmetodebayar
+                    hari[index] = simpanhari
+                    tanggal[index] = simpantanggal
+                    hargaproduk[index] = simpanharga
+                    diskon[index] = simpandiskon
+                    totalharga[index] = simpantotal
+                    
+                    showData()
+                    index.pop()
+                  }
+
+                  
              
     
     </script>
