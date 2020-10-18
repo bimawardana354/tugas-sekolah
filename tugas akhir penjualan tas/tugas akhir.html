@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      .jumbotron{
+        height: 450px;
+        background-image: url(https://images.pexels.com/photos/1087727/pexels-photo-1087727.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-size: cover;
+        background-position-y: -100px;
+      }
+
+      .judullist{
+        height: 50px;
+        font-size: 20px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid text-white">
+      <div class="container">
+        <h1 class="display-4">MANCODE.ID</h1>
+        <p class="lead">Tas merupakan wadah tertutup yang berfungsi untuk menyimpan barang saat berpergian, baik itu untuk bepergian santai maupun menempuh jarak jauh. Material untuk membuat tas beragam, antara lain plastik, kain, kulit, dan lain sebagainya.</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="judullist bg-dark rounded text-center text-white pt-2">List items</div>
+
+
+          <div class="listkeranjang" id="listkeranjang">
+
+          </div>
+
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td>Discount (10%)</td>
+                <td>Rp. <span id="discount"></span></td>
+              </tr>
+              <tr>
+              <td>PPN (10%)</td>
+              <td>Rp. <span id="pajak"></span></td>
+            </tr>
+            <tr class="bg-dark text-white">
+              <td>Total Bayar</td>
+              <td>Rp. <span id="totalbayar"></span></td>
+            </tr>
+            </tbody>
+          </table>
+
+          
+          <button type="button" class="btn btn-large btn-block btn-primary mt-3">Bayar</button>
+          
+
+        </div>
+
+        <div class="col-8" id="listproduk">
+          <!-- di list produk -->
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var namabarang = ['Bucket Bag','Satchel Bag','Backpack','Messenger Bag','Cross Body','Duffle Bag']
+      var hargabarang = [500000,600000,400000,700000,300000,800000]
+      var gambarbarang = [
+        "https://mancode.id/media/images/Bucket-Bag.width-800.jpg",
+        "https://mancode.id/media/images/Satchel-Bag.width-800.jpg",
+        "https://mancode.id/media/images/Backpack.width-800.jpg",
+        "https://mancode.id/media/images/Messenger-Bag.width-800.jpg",
+        "https://mancode.id/media/images/Cross-Body.width-800.jpg",
+        "https://mancode.id/media/images/Duffle-Bag.width-800.jpg"
+        ]
+        
+        var listproduk = document.getElementById('listproduk')
+        var listkeranjang = document.getElementById('listkeranjang')
+      
+        var namabarang_keranjang = []
+        var hargabarang_keranjang = []
+        
+        function showlistproduk(){
+          listproduk.innerHTML =''
+            for (let i = 0; i < namabarang.length; i++) {
+              const element = namabarang[i];
+              listproduk.innerHTML +='<div class="card float-left mr-3 mb-3" style="width: 13rem;">'+
+            '<img src="'+gambarbarang[i]+'" class="card-img-top" alt="...">'+
+            '<div class="card-body">'+
+              '<h5 class="card-title">'+namabarang[i]+'</h5>'+
+              '<p class="card-text">Rp. '+hargabarang[i]+'</p>'+
+              '<a class="btn btn-primary" onclick="addlistitem('+i+')">Beli</a>'+
+            '</div>'+
+            '</div>'
+
+            } 
+        }
+
+        function addlistitem(id) {
+          namabarang_keranjang.push(namabarang[id])
+          hargabarang_keranjang.push(hargabarang[id])
+
+          showlistkeranjang()
+
+        }
+
+        var tampilandiscount = document.getElementById('discount')
+        var tampilanpajak = document.getElementById('pajak')
+        var tampilantotalbayar = document.getElementById('totalbayar')
+
+        function showlistkeranjang() {
+          listkeranjang.innerHTML=''
+
+          var discount = 0
+          var pajak = 0
+          var hargatotal = 0
+          var totalbayar = 0
+          for (let i = 0; i < namabarang_keranjang.length; i++) {
+          listkeranjang.innerHTML +='<div class="card mt-3 mb-3" style="width: 22rem;">'+
+              '<div class="card-body">'+
+                '<h5 class="card-title">'+namabarang_keranjang[i]+'</h5>'+
+                '<h6 class="card-taxt">Rp. '+hargabarang_keranjang[i]+'</h6>'+
+                '<p class="card-text">Qty : 1</p>'+
+                '<a class="btn btn-danger float-right" onclick="deleteitem('+i+')">Hapus</a>'+
+              '</div>'+
+            '</div>'
+
+            hargatotal = hargabarang_keranjang[i]+hargatotal
+
+            if(namabarang_keranjang)
+
+            if(totalbayar>500000){
+              discount = totalbayar*0.5
+            }else{
+              discount = 0
+            }
+
+            totalbayar = hargatotal - discount 
+
+            pajak = hargatotal*0.1
+
+            var totalbelanja = totalbayar - pajak
+            tampilanpajak.innerHTML = pajak
+            tampilandiscount.innerHTML = discount
+            tampilantotalbayar.innerHTML = totalbelanja
+            
+          }
+
+        }
+
+
+        function deleteitem(id) {
+          namabarang_keranjang.splice(id,1)
+          hargabarang_keranjang.splice(id,1)
+
+          showlistkeranjang()
+          
+        }
+
+        showlistproduk()
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
