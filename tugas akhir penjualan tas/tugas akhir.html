@@ -61,7 +61,7 @@
           </table>
 
           
-          <button type="button" class="btn btn-large btn-block btn-primary mt-3">Bayar</button>
+          <button type="button" class="btn btn-large btn-block btn-primary mt-3" name="simpantugasakhir" onclick="add()">Bayar</button>
           
 
         </div>
@@ -72,6 +72,20 @@
         </div>
       </div>
     </div>
+    <table class="container table table-sm mt-3 text-center">
+      <thead action="simpantugasakhir.php" method="POST">
+        <tr style="background-color: #34495e; color: white;">
+          <th scope="col">No</th>
+          <th scope="col">Nama Barang</th>
+          <th scope="col">Diskon</th>
+          <th scope="col">Pajak</th>
+          <th scope="col">Total Bayar</th>
+        </tr>
+      </thead>
+      <tbody id="tampildata">
+        
+      </tbody>
+    </table>
 
     <script>
       var namabarang = ['Bucket Bag','Satchel Bag','Backpack','Messenger Bag','Cross Body','Duffle Bag']
@@ -124,8 +138,10 @@
 
           var discount = 0
           var pajak = 0
+          var totalbayar = 0 
+          var totalbelanja = 0
           var hargatotal = 0
-          var totalbayar = 0
+
           for (let i = 0; i < namabarang_keranjang.length; i++) {
           listkeranjang.innerHTML +='<div class="card mt-3 mb-3" style="width: 22rem;">'+
               '<div class="card-body">'+
@@ -141,7 +157,7 @@
             if(namabarang_keranjang)
 
             if(totalbayar>500000){
-              discount = totalbayar*0.5
+              discount = totalbayar*0.05
             }else{
               discount = 0
             }
@@ -149,9 +165,9 @@
             totalbayar = hargatotal - discount 
 
             pajak = hargatotal*0.1
-
             var totalbelanja = totalbayar - pajak
-            tampilanpajak.innerHTML = pajak
+
+            tampilanpajak.innerHTML = discount
             tampilandiscount.innerHTML = discount
             tampilantotalbayar.innerHTML = totalbelanja
             
@@ -159,6 +175,7 @@
 
         }
 
+        showlistproduk()
 
         function deleteitem(id) {
           namabarang_keranjang.splice(id,1)
@@ -168,7 +185,47 @@
           
         }
 
-        showlistproduk()
+      var namabarang_table = []
+      var discount_table = []
+      var pajak_table = []
+      var totalbelanja_table = []
+
+        var tampil = document.getElementById('tampildata')
+
+
+        function showlisttable() {
+          tampil.innerHTML = ''
+
+        for (l = 0; l < namabarang_table.length; l++) {
+          var nodata = l+1
+
+            tampil.innerHTML +='<tr>'+
+              '<td scope="col">'+nodata+'</td>'+
+              '<td scope="col">'+namabarang_table[l]+'</td>'+
+              '<td scope="col">'+discount_table[l]+'</td>'+
+              '<td scope="col">'+pajak_table[l]+'</td>'+
+              '<td scope="col">'+totalbelanja_table[l]+'</td>'+
+            '</tr>'
+
+        }
+      }
+
+      showlistkeranjang()
+
+
+      function add() {
+
+
+        namabarang_table.push(namabarang_keranjang)
+        discount_table.push(discount)
+        pajak_table.push(pajak)
+        totalbelanja_table.push(tampilantotalbayar)
+          
+        showlisttable()
+      }
+
+
+
 
     </script>
     <!-- Optional JavaScript -->
